@@ -20,13 +20,17 @@ angular.module('example366', ['ngAnimate', 'ngTouch'])
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_970x250.jpg', desc: '970x250', site: 'Standard'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1050x1020.jpg', desc: '1050x1020', site: 'Standard'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1280x100.jpg', desc: '1280x100', site: 'Standard'},
+        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/Complex_Mobile_Inline_600x800_half.jpg', desc: '600X800', site: 'Mobile'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_640x1136_half.jpg', desc: '640x1136', site: 'Millenial'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/Bueller_1536x1152_half.jpg', desc: '1536x1152', site: 'Millenial'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1136x640_half.jpg', desc: '1136x640', site: 'Millenial'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1152x1536_half.jpg', desc: '1152x1536', site: 'Millenial'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1200x1920_half.jpg', desc: '1200x1920', site: 'Millenial'},
+        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_1536x1152_half.jpg', desc: '1536x1152', site: 'Millenial'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_Static_1920x1200_half.jpg', desc: '1920x1200', site: 'Millenial'},
-        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_Yahoo_Insitu.jpg', desc: 'Yahoo', site: 'Yahoo'},
+        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_Yahoo_Insitu.jpg', desc: 'Yahoo Insitu', site: 'Yahoo'},
+        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_Yahoo_InsituMarks.jpg', desc: 'Yahoo Watermerks', site: 'Yahoo'},
+        {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/BuellerHeritage_Yahoo.jpg', desc: 'Yahoo ', site: 'Yahoo'},
         {src: 'http://mcsaatchiladigital.com/digital/dev/ugg_mens_fall_2015_banner_ads/static/bueller_heritage/FWBB_Exp_UGG-BUELLER.jpg', desc: '1200x75 (Collapsed) & 1200x300 (Expanded)', site: 'Standard'}
             ];
 
@@ -52,4 +56,15 @@ angular.module('example366', ['ngAnimate', 'ngTouch'])
     $scope.showPhoto = function (index) {
         $scope._Index = index;
     };
+});
+
+$(document).ready(function () {
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
 });
