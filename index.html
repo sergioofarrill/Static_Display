@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="example366">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Script Tutorials" />
+    <title>Bueller Heritage-Static</title>
+    <meta name="description" content="Bueller Heritage - Static Banners">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <body ng-controller="MainCtrl">
+    <header>
+        <a href="#" class="logo"><img src="images/M&CSAATCHI_Black.gif" /></a>
+    </header>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-1 ">
+    <aside class="side-nav">
+    <div class="logo"><img src="http://mcsaatchiladigital.com/UGG/logo/UGGLogo.gif"/></div>
+    <h3>Bueller Heritage</h3>
+                <!-- extra navigation controls -->
+            <ul class="nav">
+
+                <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}" ng-click="showPhoto($index);" class="scrollup">
+                   <span  class="desc">{{photo.desc | lowercase}}</span>
+                   <span class="sml-txt">{{photo.site}}</span>
+                   <div class="thumb-img">
+                    <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}"  />
+                   </div> 
+                </li>
+            </ul>
+    </aside>
+    </div>
+    <div class="col-md-6">
+    <!-- slider container -->
+    <div class="container slider">
+
+        <!-- enumerate all photos -->
+        <div ng-repeat="photo in photos" class="main-img">
+        
+        <h3 ng-show="isActive($index)" class="site">Site: {{photo.site}}</h3> 
+        <h4 ng-show="isActive($index)" class="desc">Size: {{photo.desc | uppercase | orderBy:'site'}}</h4> 
+        <img class="slide animated fadeIn" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+        </div>
+        <div class="controls">
+        <!-- prev / next controls -->
+        <a class="arrow prev pull-left" href="#" ng-click="showPrev()"></a>
+        <a class="arrow next pull-left" href="#" ng-click="showNext()"></a>
+        </div>
+        
+    </div>
+    </div>
+
+</div> 
+</div>
+<div class="clearfix"></div>
+<div class="push"></div>
+<footer></footer>
+
+</body>
+
+    <!-- add javascripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
