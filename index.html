@@ -17,7 +17,7 @@
     </header>
 <div class="container-fluid">
 <div class="row">
-    <div class="col-md-1 ">
+    <div class="col-md-2 ">
     <aside class="side-nav">
     <div class="logo"><img src="http://mcsaatchiladigital.com/UGG/logo/UGGLogo.gif"/></div>
     <h3>Bueller Heritage</h3>
@@ -25,11 +25,8 @@
             <ul class="nav">
 
                 <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}" ng-click="showPhoto($index);" class="scrollup">
-                   <span  class="desc">{{photo.desc | lowercase}}</span>
-                   <span class="sml-txt">{{photo.site}}</span>
-                   <div class="thumb-img">
-                    <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}"  />
-                   </div> 
+                   <span class="sml-txt">{{photo.site}} - {{photo.desc | lowercase}}</span>
+                   
                 </li>
             </ul>
     </aside>
