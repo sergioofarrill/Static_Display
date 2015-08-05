@@ -10,7 +10,6 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <body ng-controller="MainCtrl">
     <header>
         <a href="#" class="logo"><img src="images/M&CSAATCHI_Black.gif" /></a>
@@ -23,10 +22,8 @@
     <h3>Bueller Heritage</h3>
                 <!-- extra navigation controls -->
             <ul class="nav">
-
                 <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}" ng-click="showPhoto($index);" class="scrollup">
-                   <span class="sml-txt">{{photo.site}} - {{photo.desc | lowercase}}</span>
-                   
+                   <span class="sml-txt">{{photo.site}} - {{photo.desc | lowercase}}</span>             
                 </li>
             </ul>
     </aside>
@@ -34,7 +31,6 @@
     <div class="col-md-6">
     <!-- slider container -->
     <div class="container slider">
-
         <!-- enumerate all photos -->
         <div ng-repeat="photo in photos" class="main-img">
         
@@ -46,19 +42,15 @@
         <!-- prev / next controls -->
         <a class="arrow prev pull-left" href="#" ng-click="showPrev()"></a>
         <a class="arrow next pull-left" href="#" ng-click="showNext()"></a>
-        </div>
-        
+        </div>       
     </div>
     </div>
-
 </div> 
 </div>
 <div class="clearfix"></div>
 <div class="push"></div>
 <footer></footer>
-
 </body>
-
     <!-- add javascripts -->
     <script src="js/jquery-2.0.3.min.js"></script>
     <script src="http://code.angularjs.org/1.2.0rc1/angular.js"></script>
